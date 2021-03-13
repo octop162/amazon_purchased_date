@@ -9,14 +9,14 @@ Amazonの購入時間を可視化したい
 2. 受信日時を取り出せるのでそれらを可視化する
 
 # 準備
-## credentials.jsonの取得
+
 - Gmail APIから自分用の `credentials.json` をダウンロードして同じディレクトリに置く。
 - `pull.py` のemail変数を自分のメールアドレスに変更
-- pipenvを使用（なければPipfileにある依存関係をインストール）
+- Pipenvで依存関係をインストール（なければPipfileにある依存関係を手動でインストール）
 
 # 実行
 
-Pipenv
+Pipenvの場合
 
 ```bash
 # 取得データを保存
