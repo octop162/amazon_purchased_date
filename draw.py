@@ -18,8 +18,15 @@ times = times.rename(columns={1: 'count'}, index={0: 'date'})
 group = times.groupby(pd.Grouper(freq='60min')).count()
 
 # 可視化
+x = group.index.strftime("%H:%M:%S")
+y = group
+
 fig = plt.figure(figsize=(20,5))
 ax = fig.add_subplot(1,1,1)
-ax.plot(group)
-ax.set(title='Purchase')
+
+ax.bar(x, group['count'], color="gray", align="center")
+ax.set_title('Purchase Count')
+ax.set_xticks(x)
+ax.set_yticks(np.arange(0, y.max().item() ))
+
 fig.savefig('figure.png')

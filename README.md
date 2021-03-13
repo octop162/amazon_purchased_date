@@ -33,6 +33,8 @@ python pull.py > created_dates.txt
 # 保存データから読み込む
 python draw.py
 ```
+# 完成例
+![完成例](figure_sample.png)
 
 # リンク
 - [Gmail API](https://developers.google.com/gmail/api)
